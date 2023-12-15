@@ -257,6 +257,8 @@ class VoterPhoneVerificationEntry extends Component {
     // console.log('onPhoneNumberChange, incomingVoterPhoneNumber: ', incomingVoterPhoneNumber, ', voterSMSPhoneNumberIsValid:', voterSMSPhoneNumberIsValid);
     // console.log('voterSMSPhoneNumberWithPlus:', voterSMSPhoneNumberWithPlus);
     // console.log('voterSMSPhoneNumberWithPlusAndOne:', voterSMSPhoneNumberWithPlusAndOne);
+
+    // check here for debugging
     const phoneNumberErrorTimeoutId = setTimeout(() => {
       if (incomingVoterPhoneNumber && incomingVoterPhoneNumber.length > 0 && !voterSMSPhoneNumberIsValid) {
         this.setState({ displayIncorrectPhoneNumberError: true });
@@ -282,6 +284,7 @@ class VoterPhoneVerificationEntry extends Component {
     blurTextFieldAndroid();
   };
 
+  // check here for debugging
   onCancel = () => {
     // console.log('VoterPhoneVerificationEntry onCancel');
     this.setState({
